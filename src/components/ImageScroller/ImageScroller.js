@@ -52,23 +52,24 @@ class ImageScroller extends React.Component {
     }
 
     renderSelected() {
+        let style={
+            float: 'left',
+            width: '140px',
+            height: '160px',
+            marginLeft: '42px',
+            backgroundColor: '#00C853',
+            position: 'relative',
+            zIndex: -2
+        }
         return (
             <span
-                style={{
-                    float: 'left',
-                    width: '140px',
-                    height: '160px',
-                    marginLeft: '42px',
-                    backgroundColor: '#00C853',
-                    position: 'relative',
-                    zIndex: -2
-                }}
+                style={style}
             ></span>
         );
     }
 
     renderImage(entry,index) {
-        let eixoY = this.props.eixoY ? this.props.eixoY : 0;
+        let y = this.props.y ? this.props.y : 0;
 
         return (
             <li style={{
@@ -78,12 +79,12 @@ class ImageScroller extends React.Component {
                 marginLeft: `${index * 140}px`
             }} key={index + entry.toString()}>
                 <Image
-                    eixoX={entry.index}
-                    eixoY={eixoY}
-                    width={140}
-                    height={140}
+                    x={entry.index}
+                    y={y}
+                    width={170}
+                    height={170}
                     backgroundHeight={280}
-                    arquivo={this.props.arquivo}
+                    file={this.props.file}
                 />
             </li>
         );
