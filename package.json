@@ -10,7 +10,8 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-scripts": "1.1.4",
-    "react-toastify": "^4.2.0"
+    "react-toastify": "^4.2.0",
+    "serve": "10.0.1"
   },
   "scripts": {
     "postinstall": "react-scripts build",
