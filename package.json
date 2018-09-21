@@ -2,6 +2,10 @@
   "name": "front-end",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm":"6.4.1",
+    "node":"10.11.0"
+  },
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -9,7 +13,8 @@
     "react-toastify": "^4.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "postinstall": "react-scripts build",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
